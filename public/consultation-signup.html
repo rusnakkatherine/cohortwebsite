@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://www.gstatic.com/firebasejs/6.4.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.4.2/firebase-firestore.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/6.4.0/firebase-firestore.js"></script> -->
+
+    <link rel="stylesheet" type='text/css' href="landingpagestyles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <title>Consultation Signup</title>
+</head>
+<body>
+        <div class="all">
+                <nav class="navbar">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="landingpage.html">RR Consulting</a>
+                        </div>
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="landingpage.html">Home</a></li>
+                            <!-- <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Links <span
+                                        class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="about.html">About</a></li>
+                                    <li><a href="consultation-signup.html">Consultation Signup</a></li>
+                                     <li><a href="#">Page 1-3</a></li>
+                                </ul> -->
+                            <!-- </li> -->
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="consultation-signup.html">Consultation</a></li>
+        
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="consultation-signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
+                            </li>
+                            <!-- <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
+                        </ul>
+                    </div>
+                </nav>
+                <div class="hero-image" id="meeting">
+                    <!-- <img src="images/photo-1454165804606-c3d57bc86b40.jpeg" class='header-image' alt="consultation-image"> -->
+                    
+                </div>
+                <!-- <form id="regForm" action="">
+                    <h1>Consultation Signup:</h1>
+                    <div class="tab">Name:
+                      <p><input placeholder="First name..."  name="fname" id="fname"></p>
+                      <p><input placeholder="Last name..."  name="lname" id="lname"></p>
+                    </div>
+                    <div class="tab">Contact Info:
+                      <p><input placeholder="E-mail..." name="email" id="email"></p>
+                      <p><input placeholder="Phone..."  name="phone" id="phone"></p>
+                    </div>
+                    <div class="tab">Company Name:
+                      <p><input placeholder="Company Name"  name="companyname" id="company"></p>
+                    </div>
+                    <div style="overflow:auto;">
+                      <div style="float:right;">
+                        <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                        <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                      </div>
+                    </div>
+                    <div style="text-align:center;margin-top:40px;">
+                      <span class="step"></span>
+                      <span class="step"></span>
+                      <span class="step"></span>
+                      <span class="step"></span>
+                    </div>
+                  </form> -->
+                  <form id="regForm" action="">
+                    <h1>Consultation Signup:</h1>
+                    <p>
+                        <label for="">First Name..</label>
+                        <input type="text" name="fname" id="fname">
+                    </p>
+                    <p>
+                        <label for="">Last Name..</label>
+                        <input type="text" name="lname" id="lname">
+                    </p>
+                    <p>
+                        <label for="">Company</label>
+                        <input type="text" name="company" id="company">
+                    </p>
+                    <p>
+                        <label for="">Email Address</label>
+                        <input type="email" name="email" id="email">
+                    </p>
+                    <p>
+                        <label for="">Phone Number</label>
+                        <input type="text" name="phone" id="phone">
+                    </p>
+                        <button type="submit" id="submit">Submit</button>
+                    </p>
+                </form> 
+                  
+     <!-- The core Firebase JS SDK is always required and must be listed first -->
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+    
+     <!-- <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+              apiKey: "AIzaSyBElIzZCf8xVutODbNES8Ulbnsa3UN1iW4",
+              authDomain: "brookshirepmp.firebaseapp.com",
+              databaseURL: "",
+              projectId: "brookshirepmp",
+              storageBucket: "brookshirepmp.appspot.com",
+              messagingSenderId: "510835145695",
+              appId: "1:510835145695:web:37745334a65f50fc"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            const db = firebase.firestore();
+            db.settings({timestampsInSnapshots: true});
+          </script>               
+     -->
+     <script>
+        var firebaseConfig = {
+        apiKey: "AIzaSyBpdVQUXLRz6SMQKnlOx65PjjF8tY4XYdo",
+        authDomain: "rrconsulting-cohortwebsite.firebaseapp.com",
+        databaseURL: "https://rrconsulting-cohortwebsite.firebaseio.com",
+        projectId: "rrconsulting-cohortwebsite",
+        storageBucket: "rrconsulting-cohortwebsite.appspot.com",
+        messagingSenderId: "84379478733",
+        appId: "1:84379478733:web:29112005783a699a"
+      };
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+      </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>   
+<script src="js/landingpage.js"></script>   
+</body>
+</html>
